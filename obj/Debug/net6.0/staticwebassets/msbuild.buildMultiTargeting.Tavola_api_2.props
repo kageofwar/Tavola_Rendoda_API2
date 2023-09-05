@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Tavola_api_2.props" />
+</Project>
