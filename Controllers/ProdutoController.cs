@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Tavola_api_2.Data;
 using Tavola_api_2.Data.Dtos;
 using Tavola_api_2.Models;
@@ -10,10 +11,12 @@ namespace Tavola_api_2.Controllers
     public class ProdutoController : ControllerBase
     {
         private TavolaContext _context;
+        private IMapper _mapper;
 
-        public ProdutoController(TavolaContext context)
+        public ProdutoController(TavolaContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -22,9 +25,11 @@ namespace Tavola_api_2.Controllers
         /// <returns>IEnumerable</returns>
         /// <response code="201">Lista com os produtos.</response>
         [HttpGet]
-        public IEnumerable<Produto> Index()
+        public IEnumerable<ReadProdutoDto> Index([FromQuery] int skip = 0, [FromQuery] int take = 50)
         {
-            return _context.Produtos;
+            //return _context.Produtos;
+
+            return _mapper.Map<List<ReadProdutoDto>>(_context.Produtos.Skip(skip).Take(take).ToList());
         }
 
         /// <summary>
@@ -36,24 +41,10 @@ namespace Tavola_api_2.Controllers
         [HttpPost]
         public IActionResult Store([FromBody] CreateProdutoDto produtoDto)
         {
-            Produto produto = new Produto()
-            {
-                Nome = produtoDto.Nome,
-                Descricao = produtoDto.Descricao,
-                Valor = produtoDto.Valor,
-            };
-
+            Produto produto = _mapper.Map<Produto>(produtoDto);
             _context.Produtos.Add(produto);
             _context.SaveChanges();
-
-            var mensagem = "Produto cadastrado com sucesso!";
-            var resposta = new
-            {
-                Mensagem = mensagem,
-                Produto = produto
-            };
-
-            return Ok(resposta);
+            return CreatedAtAction(nameof(Search), new {Id = produto.Id}, produtoDto);
         }
 
         /// <summary>
@@ -92,7 +83,7 @@ namespace Tavola_api_2.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns code="202">Caso o produto exista na base de dados.</returns>
-        [HttpGet("teste/{id}")]
+        [HttpGet("{id}")]
         public IActionResult Search(int id)
         {
             var produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);

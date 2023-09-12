@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "g2QVGr+0rdsVhxzBCigvPebTkPmcRGw1d1bsitkxb02Wnv+zRJCiBeSgK8gRx+po2l2T9uKgNkTf9EIZ000UtA==",
+  "dgSpecHash": "PLKm9L+cnOxqv8aCdbsAhEUCYy2y00B8SmnxoXx0SoRzlZ+o//JckKKGsWO++aSvqyp+gLWuR6eR5AKSFSdmqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\x385830\\Documents\\Estudos\\Tavola_api_2\\Tavola_api_2\\Tavola_api_2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\x385830\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\x385830\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\x385830\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\x385830\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\x385830\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\x385830\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
     "C:\\Users\\x385830\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.10\\microsoft.entityframeworkcore.analyzers.7.0.10.nupkg.sha512",

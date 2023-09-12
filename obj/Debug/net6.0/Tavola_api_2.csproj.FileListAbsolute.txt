@@ -54,3 +54,5 @@ C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\obj\Debug\net6.0\Ta
 C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\obj\Debug\net6.0\ref\Tavola_api_2.dll
 C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\bin\Debug\net6.0\Tavola_api_2.xml
 C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\obj\Debug\net6.0\Tavola_api_2.xml
+C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\x385830\Documents\Estudos\Tavola_api_2\Tavola_api_2\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

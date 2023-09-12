@@ -4,7 +4,7 @@
         <name>Tavola_api_2</name>
     </assembly>
     <members>
-        <member name="M:Tavola_api_2.Controllers.ProdutoController.Index">
+        <member name="M:Tavola_api_2.Controllers.ProdutoController.Index(System.Int32,System.Int32)">
             <summary>
             Irá retornar todos os produtos cadastrados
             </summary>
@@ -51,6 +51,66 @@
             <inheritdoc />
         </member>
         <member name="M:Tavola_api_2.Migrations.Criando_Tabela_Produtos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.AdicionandoCategoria">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.AdicionandoCategoria.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.AdicionandoCategoria.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.AdicionandoCategoria.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.editando_campos">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.editando_campos_2">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.editando_campos_3">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campos_3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.editando_campo_45">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campo_45.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campo_45.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_campo_45.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
