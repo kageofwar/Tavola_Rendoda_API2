@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using Tavola_api_2.Models;
 
 namespace Tavola_api_2.Data.Dtos

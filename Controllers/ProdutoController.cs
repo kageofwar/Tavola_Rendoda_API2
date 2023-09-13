@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Tavola_api_2.Data;
 using Tavola_api_2.Data.Dtos;
 using Tavola_api_2.Models;
@@ -25,11 +26,11 @@ namespace Tavola_api_2.Controllers
         /// <returns>IEnumerable</returns>
         /// <response code="201">Lista com os produtos.</response>
         [HttpGet]
-        public IEnumerable<ReadProdutoDto> Index([FromQuery] int skip = 0, [FromQuery] int take = 50)
+        public IEnumerable<Produto> Index()
         {
-            //return _context.Produtos;
+            var produto = _context.Produtos.Include(produto => produto.Categoria);
 
-            return _mapper.Map<List<ReadProdutoDto>>(_context.Produtos.Skip(skip).Take(take).ToList());
+            return produto;
         }
 
         /// <summary>

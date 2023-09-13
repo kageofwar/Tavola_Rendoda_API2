@@ -4,7 +4,7 @@
         <name>Tavola_api_2</name>
     </assembly>
     <members>
-        <member name="M:Tavola_api_2.Controllers.ProdutoController.Index(System.Int32,System.Int32)">
+        <member name="M:Tavola_api_2.Controllers.ProdutoController.Index">
             <summary>
             Irá retornar todos os produtos cadastrados
             </summary>

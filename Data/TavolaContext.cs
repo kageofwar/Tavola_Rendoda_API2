@@ -11,5 +11,6 @@ namespace Tavola_api_2.Data
         }
 
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
     }
 }
