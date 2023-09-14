@@ -8,9 +8,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("TavolaConnection");
 
+
 builder.Services.AddDbContext<TavolaContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddCors(opts => 
+{
+    opts.AddDefaultPolicy(
+        policy => 
+        {
+            policy
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,7 +45,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

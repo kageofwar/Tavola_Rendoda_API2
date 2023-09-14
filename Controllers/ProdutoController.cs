@@ -40,9 +40,11 @@ namespace Tavola_api_2.Controllers
         /// <returns>IactionResult</returns>
         /// <response code="202">Caso ocorra tudo certo.</response>
         [HttpPost]
-        public IActionResult Store([FromBody] CreateProdutoDto produtoDto)
+        public IActionResult Store([FromForm] CreateProdutoDto produtoDto)
         {
             Produto produto = _mapper.Map<Produto>(produtoDto);
+            var categoria = _context.Categoria.Find(produtoDto.CategoriaId);
+            produto.Categoria = categoria;
             _context.Produtos.Add(produto);
             _context.SaveChanges();
             return CreatedAtAction(nameof(Search), new {Id = produto.Id}, produtoDto);
@@ -55,16 +57,19 @@ namespace Tavola_api_2.Controllers
         /// <param name="produtoDto"></param>
         /// <response code="202">Caso o item exista na base.</response>
         [HttpPut("{id}")]
-        public IActionResult Edit(int id, [FromBody] EditProdutoDto produtoDto)
+        public IActionResult Edit(int id, [FromForm] EditProdutoDto produtoDto)
         {
             var produto = _context.Produtos.Find(id);
 
             var mensagemNaoEncontrado = "Produto com o Id: " + id + " não encontrado";
             if (produto == null) return NotFound(mensagemNaoEncontrado);
 
+            var categoria = _context.Categoria.Find(produtoDto.CategoriaId);
+
             produto.Nome = produtoDto.Nome;
             produto.Descricao = produtoDto.Descricao;
             produto.Valor = produtoDto.Valor;
+            produto.Categoria = categoria;
 
             _context.Produtos.Update(produto);
             _context.SaveChanges();
