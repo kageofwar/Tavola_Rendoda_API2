@@ -14,6 +14,6 @@ namespace Tavola_api_2.Models
         public string Nome { get; set; }
 
         [JsonIgnore]
-        public virtual ICollection<Produto> Produtos { get; set; }
+        public virtual ICollection<Produto>? Produtos { get; set; }
     }
 }

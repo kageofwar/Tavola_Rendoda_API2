@@ -46,11 +46,8 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
-<<<<<<< HEAD
 
 app.UseCors();
-=======
->>>>>>> e1009259edc6e9b185994deae9758a5cf57eeb88
 
 app.UseAuthorization();
 

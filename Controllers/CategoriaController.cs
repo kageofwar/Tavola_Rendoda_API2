@@ -2,6 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Tavola_api_2.Data;
 using Tavola_api_2.Data.Dtos;
+using Tavola_api_2.Models;
 
 namespace Tavola_api_2.Controllers
 {
@@ -22,6 +23,14 @@ namespace Tavola_api_2.Controllers
         public IEnumerable<ReadCategoriaDto> Index()
         {
             return _mapper.Map<List<ReadCategoriaDto>>(_context.Categoria.ToList());
+        }
+
+        [HttpPost]
+        public IActionResult Store([FromForm]Categoria categoria)
+        {
+            _context.Categoria.Add(categoria);
+            _context.SaveChanges();
+            return Ok();
         }
     }
 }
