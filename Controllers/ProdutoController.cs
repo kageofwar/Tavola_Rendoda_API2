@@ -21,8 +21,10 @@ namespace Tavola_api_2.Controllers
         }
 
         /// <summary>
-        /// Irá retornar todos os produtos cadastrados
+        /// Irá retornar todos os produtos cadastrados /
+        /// Se colocar na Url ?categoriaId=ID irá retornar os produtos a partir do Id da categoria.
         /// </summary>
+        /// <param name="categoriaId"></param>
         /// <returns>IEnumerable</returns>
         /// <response code="201">Lista com os produtos.</response>
         [HttpGet]
