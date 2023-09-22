@@ -26,11 +26,14 @@ namespace Tavola_api_2.Controllers
         /// <returns>IEnumerable</returns>
         /// <response code="201">Lista com os produtos.</response>
         [HttpGet]
-        public IEnumerable<Produto> Index()
+        public IEnumerable<Produto> Index([FromQuery] int? categoriaId = null)
         {
-            var produto = _context.Produtos.Include(produto => produto.Categoria);
+            if(categoriaId == null) {
+                var produto = _context.Produtos.Include(produto => produto.Categoria);
 
-            return produto;
+                return produto;
+            }
+            return _context.Produtos.FromSqlRaw($"SELECT Id, Nome, Descricao, Valor, CategoriaId FROM produtos WHERE CategoriaId = {categoriaId}").ToList();
         }
 
         /// <summary>
