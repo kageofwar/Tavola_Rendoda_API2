@@ -115,5 +115,29 @@
         <member name="M:Tavola_api_2.Migrations.editando_campo_45.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Tavola_api_2.Migrations.Create_Pedidos_Table">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_Pedidos_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_Pedidos_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_Pedidos_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.Create_PedidosItens_Table">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_PedidosItens_Table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_PedidosItens_Table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.Create_PedidosItens_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

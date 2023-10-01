@@ -28,12 +28,33 @@ namespace Tavola_api_2.Controllers
         }
 
         [HttpPost]
-        public IActionResult Store([FromForm]Pedido pedido)
+        public IActionResult Store([FromBody]Pedido pedido)
         {
-            _context.Pedido.Add(pedido);
+            var novoPedido = new Pedido
+            {
+                Forma_Pagamento = pedido.Forma_Pagamento,
+                Status_Pedido = pedido.Status_Pedido,
+                Total = pedido.Total
+            };
+
+            _context.Pedido.Add(novoPedido);
             _context.SaveChanges();
 
-            
+            foreach (var item in pedido.Itens)
+            {
+                if (_context.Produtos.Find(item.ProdutoId) == null) return BadRequest();
+
+                var novoItemPedido = new PedidoItens
+                {
+                    PedidoId = novoPedido.Id,
+                    ProdutoId = item.ProdutoId,
+                    Quantidade = item.Quantidade
+                };
+
+                _context.PedidoItens.Add(novoItemPedido);
+                _context.SaveChanges();
+            }
+
             return Ok();
         }
 
