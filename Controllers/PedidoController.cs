@@ -32,23 +32,23 @@ namespace Tavola_api_2.Controllers
         {
             var novoPedido = new Pedido
             {
-                Forma_Pagamento = pedido.Forma_Pagamento,
-                Status_Pedido = pedido.Status_Pedido,
-                Total = pedido.Total
+                pagamento = pedido.pagamento,
+                status = pedido.status,
+                total = pedido.total
             };
 
             _context.Pedido.Add(novoPedido);
             _context.SaveChanges();
 
-            foreach (var item in pedido.Itens)
+            foreach (var item in pedido.itens)
             {
-                if (_context.Produtos.Find(item.ProdutoId) == null) return BadRequest();
+                if (_context.Produtos.Find(item.produtoId) == null) return BadRequest();
 
                 var novoItemPedido = new PedidoItens
                 {
-                    PedidoId = novoPedido.Id,
-                    ProdutoId = item.ProdutoId,
-                    Quantidade = item.Quantidade
+                    pedidoId = novoPedido.Id,
+                    produtoId = item.produtoId,
+                    quantidade = item.quantidade
                 };
 
                 _context.PedidoItens.Add(novoItemPedido);

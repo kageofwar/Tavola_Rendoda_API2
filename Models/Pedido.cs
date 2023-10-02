@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tavola_api_2.Models
 {
@@ -10,15 +11,16 @@ namespace Tavola_api_2.Models
 
         [Required]
         [MaxLength(255)]
-        public string Forma_Pagamento { get; set; }
+        public string pagamento { get; set; }
         
         [Required]
         [MaxLength(255)]
-        public string Status_Pedido { get; set; }
+        public string status { get; set; }
 
         [Required]
-        public int Total { get; set; }
+        [Precision(8,2)]
+        public decimal total { get; set; }
 
-        public List<PedidoItens> Itens { get; set; }
+        public List<PedidoItens> itens { get; set; }
     }
 }

@@ -139,5 +139,41 @@
         <member name="M:Tavola_api_2.Migrations.Create_PedidosItens_Table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Tavola_api_2.Migrations.editando_colunas">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_colunas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_colunas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editando_colunas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.editanto_coluenas">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editanto_coluenas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editanto_coluenas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.editanto_coluenas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Tavola_api_2.Migrations.decimal_colunm_bruh">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.decimal_colunm_bruh.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.decimal_colunm_bruh.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.decimal_colunm_bruh.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
