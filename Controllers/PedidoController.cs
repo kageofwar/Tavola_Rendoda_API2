@@ -1,8 +1,15 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Tavola_api_2.Data;
 using Tavola_api_2.Dtos;
 using Tavola_api_2.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace Tavola_api_2.Controllers
 {
@@ -61,18 +68,12 @@ namespace Tavola_api_2.Controllers
         [HttpGet("{id}")]
         public IActionResult Search(int id)
         {
-            var pedido = _context.Pedido.FirstOrDefault(pedido => pedido.Id == id);
-
-            if (pedido == null) return NotFound("Pedido não encontrado");
-
-            var mensagem = "Pedido encontrado! Aqui está o Pedido com o ID " + id + ":";
-            var resposta = new
-            {
-                Mensagem = mensagem,
-                Produto = pedido
-            };
-
-            return Ok(resposta);
+            var pedido = _context.Pedido
+            .Include(p => p.itens)
+            .ThenInclude(i => i.Produto)
+            .FirstOrDefault(p => p.Id == id);
+            
+            return Ok(pedido);
         }
     }
 }

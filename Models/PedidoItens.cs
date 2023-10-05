@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Tavola_api_2.Models
 {
@@ -17,6 +18,7 @@ namespace Tavola_api_2.Models
         [Required]
         public int quantidade { get; set; }
 
+        [JsonIgnore]
         public virtual Pedido ?Pedido { get; set; }
         public virtual Produto ?Produto { get; set; }
     }
