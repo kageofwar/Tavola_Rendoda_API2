@@ -72,6 +72,8 @@ namespace Tavola_api_2.Controllers
             .Include(p => p.itens)
             .ThenInclude(i => i.Produto)
             .FirstOrDefault(p => p.Id == id);
+
+            if (pedido == null) return BadRequest();
             
             return Ok(pedido);
         }
