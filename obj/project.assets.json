@@ -1636,19 +1636,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\x385830\\.nuget\\packages\\": {}
+    "C:\\Users\\x529427\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\x385830\\Documents\\Estudos\\Tavola_Rendoda_API2\\Tavola_api_2.csproj",
+      "projectUniqueName": "C:\\Users\\x529427\\Documents\\Repos\\be-tavola\\Tavola_api_2.csproj",
       "projectName": "Tavola_api_2",
-      "projectPath": "C:\\Users\\x385830\\Documents\\Estudos\\Tavola_Rendoda_API2\\Tavola_api_2.csproj",
-      "packagesPath": "C:\\Users\\x385830\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\x385830\\Documents\\Estudos\\Tavola_Rendoda_API2\\obj\\",
+      "projectPath": "C:\\Users\\x529427\\Documents\\Repos\\be-tavola\\Tavola_api_2.csproj",
+      "packagesPath": "C:\\Users\\x529427\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\x529427\\Documents\\Repos\\be-tavola\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\x385830\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\x529427\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1656,7 +1661,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1721,7 +1725,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
