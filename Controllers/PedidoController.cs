@@ -87,13 +87,20 @@ namespace Tavola_api_2.Controllers
             if (pedido == null) return NotFound();
 
             var pedidoAtualizar = _mapper.Map<UpdatePedidoDto>(pedido);
-
-            patch.ApplyTo(pedidoAtualizar, ModelState);
-
-            if (!TryValidateModel(pedidoAtualizar))
-            {
-                return ValidationProblem(ModelState);
+            if(pedido.status == "Recebido") {
+                pedidoAtualizar.status = "Em Andamento";
+            } else if (pedido.status == "Em Andamento") {
+                pedidoAtualizar.status = "Enviado";
+            } else {
+                pedidoAtualizar.status = "Enviado";
             }
+
+            //patch.ApplyTo(pedidoAtualizar, ModelState);
+
+            //if (!TryValidateModel(pedidoAtualizar))
+            //{
+            //    return ValidationProblem(ModelState);
+            //}
             _mapper.Map(pedidoAtualizar, pedido);
             _context.SaveChanges();
             return NoContent();
