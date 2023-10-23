@@ -92,7 +92,7 @@ namespace Tavola_api_2.Controllers
             } else if (pedido.status == "Em Andamento") {
                 pedidoAtualizar.status = "Enviado";
             } else {
-                pedidoAtualizar.status = "Enviado";
+                pedidoAtualizar.status = "Recebido";
             }
 
             //patch.ApplyTo(pedidoAtualizar, ModelState);
