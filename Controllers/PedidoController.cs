@@ -80,14 +80,16 @@ namespace Tavola_api_2.Controllers
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PedidoParcial(int id, JsonPatchDocument<UpdatePedidoDto> patch)
+        public IActionResult PedidoParcial(int id, [FromBody] PedidoFlag req)
         {
             var pedido = _context.Pedido.FirstOrDefault(
                 pedido => pedido.Id == id);
             if (pedido == null) return NotFound();
 
             var pedidoAtualizar = _mapper.Map<UpdatePedidoDto>(pedido);
-            if(pedido.status == "Recebido") {
+            if(req.flag == "client") {
+                pedidoAtualizar.status = "Finalizado";
+            } else if(pedido.status == "Recebido") {
                 pedidoAtualizar.status = "Em Andamento";
             } else if (pedido.status == "Em Andamento") {
                 pedidoAtualizar.status = "Enviado";
