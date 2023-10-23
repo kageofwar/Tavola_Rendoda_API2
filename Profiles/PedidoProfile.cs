@@ -9,6 +9,8 @@ namespace Tavola_api_2.Profiles
         public PedidoProfile()
         {
             CreateMap<Pedido, ReadPedidoDto>();
+            CreateMap<UpdatePedidoDto, Pedido>();
+            CreateMap<Pedido, UpdatePedidoDto>();
         }
     }
 }

@@ -283,6 +283,7 @@ C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\obj\Debug\net6.0\Tavola_a
 C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\obj\Debug\net6.0\Tavola_api_2.pdb
 C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\obj\Debug\net6.0\Tavola_api_2.genruntimeconfig.cache
 C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\obj\Debug\net6.0\ref\Tavola_api_2.dll
+<<<<<<< HEAD
 C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\appsettings.json
 C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\Tavola_api_2.exe
@@ -341,3 +342,13 @@ C:\Users\x529427\Documents\Repos\be-tavola\obj\Debug\net6.0\Tavola_api_2.xml
 C:\Users\x529427\Documents\Repos\be-tavola\obj\Debug\net6.0\Tavola_api_2.pdb
 C:\Users\x529427\Documents\Repos\be-tavola\obj\Debug\net6.0\Tavola_api_2.genruntimeconfig.cache
 C:\Users\x529427\Documents\Repos\be-tavola\obj\Debug\net6.0\ref\Tavola_api_2.dll
+=======
+C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\x385830\Documents\Estudos\Tavola_Rendoda_API2\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+>>>>>>> cb3148f9f4ac20f93b71af7dc0f7d0c1428c4bac
+C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\x529427\Documents\Repos\be-tavola\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -9,6 +9,6 @@ namespace Tavola_api_2.Dtos
         public string pagamento { get; set; }
         public string status { get; set; }
         public decimal total { get; set; }
-        public List<PedidoItens> itens { get; set; }
+        public ICollection<PedidoItens> itens { get; set; }
     }
 }

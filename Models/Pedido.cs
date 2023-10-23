@@ -22,6 +22,6 @@ namespace Tavola_api_2.Models
         [Precision(8,2)]
         public decimal total { get; set; }
 
-        public List<PedidoItens> itens { get; set; }
+        public ICollection<PedidoItens> itens { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.JsonPatch;
 
 
 namespace Tavola_api_2.Controllers
@@ -76,6 +77,26 @@ namespace Tavola_api_2.Controllers
             if (pedido == null) return BadRequest();
             
             return Ok(pedido);
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult PedidoParcial(int id, JsonPatchDocument<UpdatePedidoDto> patch)
+        {
+            var pedido = _context.Pedido.FirstOrDefault(
+                pedido => pedido.Id == id);
+            if (pedido == null) return NotFound();
+
+            var pedidoAtualizar = _mapper.Map<UpdatePedidoDto>(pedido);
+
+            patch.ApplyTo(pedidoAtualizar, ModelState);
+
+            if (!TryValidateModel(pedidoAtualizar))
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(pedidoAtualizar, pedido);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
