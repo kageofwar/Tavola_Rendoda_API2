@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tavola_api_2.Data;
 using Tavola_api_2.Data.Dtos;
+using Tavola_api_2.Dtos;
 using Tavola_api_2.Models;
+using System.Linq;
 
 namespace Tavola_api_2.Controllers
 {
@@ -126,6 +128,52 @@ namespace Tavola_api_2.Controllers
             var mensagem = "Produto deletado com sucesso!";
            
             return Ok(mensagem);
+        }
+
+        [HttpGet("teste")]
+        public IEnumerable<object> TotalVendasDeProdutos()
+        {
+            var dados = _context.PedidoItens.Include(pi => pi.Produto).ToList();
+
+            var totalVendasPorProduto = dados.GroupBy(pi => pi.Produto.Nome).Select(g => new {
+                Produto = g.Key,
+                Pedidos = g.Sum(pi => pi.quantidade)
+            }).ToList();
+
+            return totalVendasPorProduto;
+        }
+
+        [HttpGet("valortotalvendido")]
+        public IEnumerable<object> ValorTotalVendidoPorProduto()
+        {
+            var dados = _context.PedidoItens.Include(pi => pi.Produto).ToList();
+
+            var valorTotalVendidoPorProduto = dados
+                .GroupBy(pi => pi.Produto.Nome)
+                .Select(g => new
+                {
+                    NomeDoProduto = g.Key,
+                    ValorTotalVendido = g.Sum(pi => pi.Produto.Valor * pi.quantidade)
+                })
+                .ToList();
+
+            return valorTotalVendidoPorProduto;
+        }
+
+        [HttpGet("produtoscomestoquemenor10")]
+        public IActionResult ProdutosComEstoqueMenorQue10()
+        {
+            var produtosComEstoqueMenorQue10 = _context.Produtos
+                .Where(produto => produto.Quantidade < 10)
+                .Select(g => new
+                {
+                    Produto = g.Nome,
+                    Quantidade = g.Quantidade
+
+                })
+                .ToList();
+
+            return Ok(produtosComEstoqueMenorQue10);
         }
     }
 }

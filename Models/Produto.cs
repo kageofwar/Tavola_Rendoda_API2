@@ -19,8 +19,9 @@ namespace Tavola_api_2.Models
         public int Valor { get; set; }
 
         [Required(ErrorMessage = "O id da categoria deve ser informado!")]
-        
         public virtual Categoria Categoria { get; set; }
 
+        [Required(ErrorMessage = "Quantidade do produto deve ser inserida")]
+        public int Quantidade { get; set; }
     }
 }

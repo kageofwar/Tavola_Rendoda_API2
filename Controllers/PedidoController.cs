@@ -50,6 +50,15 @@ namespace Tavola_api_2.Controllers
 
             foreach (var item in pedido.itens)
             {
+                var produto = _context.Produtos.Find(item.produtoId);
+
+                if (produto == null || produto.Quantidade < item.quantidade)
+                {
+                    return BadRequest("Produto não encontrado ou estoque insuficiente.");
+                }
+
+                produto.Quantidade -= item.quantidade;
+
                 if (_context.Produtos.Find(item.produtoId) == null) return BadRequest();
 
                 var novoItemPedido = new PedidoItens

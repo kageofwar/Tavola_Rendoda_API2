@@ -175,5 +175,17 @@
         <member name="M:Tavola_api_2.Migrations.decimal_colunm_bruh.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Tavola_api_2.Migrations.alteracoesProdutos">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.alteracoesProdutos.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.alteracoesProdutos.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Tavola_api_2.Migrations.alteracoesProdutos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
