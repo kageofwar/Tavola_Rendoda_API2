@@ -19,4 +19,7 @@ public class CreateProdutoDto
 
     [Required(ErrorMessage = "O id da categoria deve ser informado!")]
     public int CategoriaId { get; set; } 
+
+    [Required(ErrorMessage = "A quantidade deve ser informada")]
+    public int Quantidade { get; set; }
 }

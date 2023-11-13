@@ -77,6 +77,7 @@ namespace Tavola_api_2.Controllers
             produto.Descricao = produtoDto.Descricao;
             produto.Valor = produtoDto.Valor;
             produto.Categoria = categoria;
+            produto.Quantidade = produtoDto.Quantidade;
 
             _context.Produtos.Update(produto);
             _context.SaveChanges();

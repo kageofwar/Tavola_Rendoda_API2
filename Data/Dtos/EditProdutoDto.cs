@@ -19,5 +19,8 @@ namespace Tavola_api_2.Data.Dtos
 
         [Required(ErrorMessage = "O id da categoria deve ser informado!")]
         public int CategoriaId { get; set; }
+
+        [Required(ErrorMessage = "A quantidade deve ser informada")]
+        public int Quantidade { get; set; }
     }
 }
