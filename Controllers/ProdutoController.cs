@@ -130,7 +130,7 @@ namespace Tavola_api_2.Controllers
             return Ok(mensagem);
         }
 
-        [HttpGet("teste")]
+        [HttpGet("vendas_por_produto")]
         public IEnumerable<object> TotalVendasDeProdutos()
         {
             var dados = _context.PedidoItens.Include(pi => pi.Produto).ToList();
@@ -143,7 +143,7 @@ namespace Tavola_api_2.Controllers
             return totalVendasPorProduto;
         }
 
-        [HttpGet("valortotalvendido")]
+        [HttpGet("valor_total_vendido")]
         public IEnumerable<object> ValorTotalVendidoPorProduto()
         {
             var dados = _context.PedidoItens.Include(pi => pi.Produto).ToList();
@@ -160,7 +160,7 @@ namespace Tavola_api_2.Controllers
             return valorTotalVendidoPorProduto;
         }
 
-        [HttpGet("produtoscomestoquemenor10")]
+        [HttpGet("alerta_estoque_produto")]
         public IActionResult ProdutosComEstoqueMenorQue10()
         {
             var produtosComEstoqueMenorQue10 = _context.Produtos
