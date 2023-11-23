@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tavola_api_2.Models
 {
@@ -16,7 +17,8 @@ namespace Tavola_api_2.Models
         public string Descricao { get; set; }
 
         [Required(ErrorMessage = "O Valor do produto é obrigatório!")]
-        public int Valor { get; set; }
+        [Precision(8,2)]
+        public decimal Valor { get; set; }
 
         [Required(ErrorMessage = "O id da categoria deve ser informado!")]
         public virtual Categoria Categoria { get; set; }

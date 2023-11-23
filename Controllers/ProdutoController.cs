@@ -197,8 +197,8 @@ namespace Tavola_api_2.Controllers
         public IActionResult ValorTotalPorCategoria()
         {
             var valorTotalPorCategoria = _context.PedidoItens
-                .Include(pi => pi.Produto) // Certifique-se de incluir a tabela Produto
-                .GroupBy(pi => pi.Produto.Categoria) // Agrupa por categoria
+                .Include(pi => pi.Produto)
+                .GroupBy(pi => pi.Produto.Categoria)
                 .Select(g => new
                 {
                     Categoria = g.Key,
