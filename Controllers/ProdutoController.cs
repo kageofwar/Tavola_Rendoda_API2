@@ -176,5 +176,37 @@ namespace Tavola_api_2.Controllers
 
             return Ok(produtosComEstoqueMenorQue10);
         }
+
+        [HttpGet("pedidos_por_categoria")]
+        public IActionResult PedidosPorCategoria()
+        {
+            var pedidosPorCategoria = _context.PedidoItens
+                .Include(pi => pi.Produto)
+                .GroupBy(pi => pi.Produto.Categoria)
+                .Select(g => new
+                {
+                    Categoria = g.Key,
+                    QuantidadeTotalPedidos = g.Sum(pi => pi.quantidade)
+                })
+                .ToList();
+
+            return Ok(pedidosPorCategoria);
+        }
+
+        [HttpGet("valor_total_por_categoria")]
+        public IActionResult ValorTotalPorCategoria()
+        {
+            var valorTotalPorCategoria = _context.PedidoItens
+                .Include(pi => pi.Produto) // Certifique-se de incluir a tabela Produto
+                .GroupBy(pi => pi.Produto.Categoria) // Agrupa por categoria
+                .Select(g => new
+                {
+                    Categoria = g.Key,
+                    ValorTotal = g.Sum(pi => pi.Produto.Valor * pi.quantidade)
+                })
+                .ToList();
+        
+            return Ok(valorTotalPorCategoria);
+        }
     }
 }
